@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Shabaan | Portfolio</title>
     <link rel="stylesheet" href="p.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -126,7 +127,7 @@
     </div>
 </section>
 <!-- Education -->
-<section class="education-section" id="education">
+<section class="education-section" id="education" data-aos="fade-right">
     <div class="container">
         <div class="section-header">
             <p class="subtitle">Academic Journey</p>
@@ -176,7 +177,7 @@
         <div class="project-slider" id="projectSlider">
             <!-- Project 1 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/sales-revenue-insights-dashboard-PowerBi.git" target="_blank" class="project-link-wrapper">
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="5">
                     <div class="project-image">
                         <img src="power.png" alt="Adventureworks Sales">
                     </div>
@@ -192,7 +193,7 @@
             </a>
             <!-- Airline Operational Performance Project -->
             <a href="https://github.com/mohamedshabaanaa342-bot/Airline-Operational-Performance.git" target="_blank" class="project-link-wrapper">
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="5">
                     <div class="project-image">
                         <!-- يمكنك تغيير الصورة لتناسب Power BI -->
                         <img src="a.png" alt="Airline Dashboard">
@@ -209,7 +210,7 @@
             </a>
             <!-- Project 2 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/httsales-revenue-insights-dashboard-excel.git" target="_blank" class="project-link-wrapper">
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="5">
                     <div class="project-image">
                         <img src="excel.png" alt="Excel Sales">
                     </div>
@@ -247,7 +248,7 @@
                         <img src="crm.png" alt="CRM System">
                     </div>
                     <div class="project-info">
-                        <h3>CRM System Development</h3>
+                        <h3>CRM System </h3>
                         <p class="category">SQL | DATABASE DEVELOPMENT</p>
                         <p class="project-desc">
                             Built a CRM database system to manage customer info and sales
@@ -257,37 +258,22 @@
                 </div>
             </a>
             <!-- Project 5 -->
-            <a href="https://github.com/yourusername/blood-bank" target="_blank" class="project-link-wrapper">
+            <a href="https://github.com/mohamedshabaanaa342-bot/Trains_DB.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="blood-bank.png" alt="Blood Bank System">
+                        <img src="train.png" alt="Blood Bank System">
                     </div>
                     <div class="project-info">
-                        <h3>Blood Bank System</h3>
-                        <p class="category">MONGODB | NOSQL</p>
+                        <h3>Train System </h3>
+                        <p class="category">SQL | DATABASE DEVELOPMENT</p>
                         <p class="project-desc">
-                            Developed a donor management system using MongoDB,
-                            implementing aggregation queries for activity analysis.
+                            system is a comprehensive Train Reservation System that includes: train management,
+                             trips, employees, booking, seat management.
                         </p>
                     </div>
                 </div>
             </a>
             <!-- Project 6 -->
-            <a href="https://github.com/yourusername/brain-tumor" target="_blank" class="project-link-wrapper">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="brain-tumor.png" alt="Brain Tumour Detection">
-                    </div>
-                    <div class="project-info">
-                        <h3>Brain Tumour Detection</h3>
-                        <p class="category">DEEP LEARNING | BIOINFORMATICS</p>
-                        <p class="project-desc">
-                            Deep learning model for medical image detection,
-                            achieving an Excellent (4.0) grade.
-                        </p>
-                    </div>
-                </div>
-            </a>
 
         </div>
         <div class="slider-arrows">
@@ -328,8 +314,6 @@
         </div>
     </div>
 </section>
-<script src="j.js"></script>
-</body>
 <section id="contact">
     <div>
     <div class="section-header">
@@ -358,6 +342,17 @@
     </div>
     </div>
 </section>
+<script src="j.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // سرعة الأنيميشن (ثانية واحدة)
+    once: true,     // الأنيميشن يحدث مرة واحدة فقط أثناء النزول
+    offset: 200     // يبدأ الأنيميشن قبل وصول القسم بـ 200 بكسل
+  });
+</script>
+</body>
+
 
 <!-- Footer منفصل تماماً -->
 <footer class="main-footer">
