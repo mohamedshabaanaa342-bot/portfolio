@@ -288,7 +288,7 @@ if (hero) {
 // ============================================
 const skillCards = document.querySelectorAll('.skill-card');
 
-const countUp = (el, target, duration = 1500) => {
+const countUp = (el, target, duration = 100) => {
     let start = 0;
     const step = target / (duration / 16);
     const timer = setInterval(() => {
@@ -312,7 +312,7 @@ const skillObserver = new IntersectionObserver((entries) => {
                 // animate bar width
                 barFill.style.width = '0%';
                 setTimeout(() => {
-                    barFill.style.transition = 'width 1.5s ease-out';
+                    barFill.style.transition = 'width .5s ease-out';
                     barFill.style.width = target + '%';
                 }, 100);
                 // animate counter
