@@ -1170,7 +1170,7 @@ section {
     }
     .social-sidebar {
     position: absolute;
-    left: 40px;
-    z-index: 0 !important;
+    left: 20px;
+    z-index: 0 ;
 }
 }
