@@ -1,0 +1,431 @@
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #00a884, #00d4a8, #00a884);
+    background-size: 200% 100%;
+    z-index: 9999;
+    transition: width 0.1s linear;
+    animation: shimmer 2s infinite linear;
+    box-shadow: 0 0 10px rgba(0, 212, 168, 0.6);
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   TYPING CURSOR
+   ============================================ */
+.typing-text {
+    display: inline;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #00d4a8;
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 0.8s step-end infinite;
+    box-shadow: 0 0 8px rgba(0, 212, 168, 0.6);
+    border-radius: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* ============================================
+   1. GLITCH EFFECT على الاسم
+   ============================================ */
+.hero-text h1 {
+    position: relative;
+}
+
+.hero-text h1:hover {
+    animation: glitch 0.4s ease infinite;
+}
+
+.hero-text h1::before,
+.hero-text h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.hero-text h1:hover::before {
+    color: #00d4a8;
+    animation: glitch-top 0.4s ease infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    opacity: 1;
+}
+
+.hero-text h1:hover::after {
+    color: #ff4d6d;
+    animation: glitch-bottom 0.4s ease infinite;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    opacity: 1;
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 1px); }
+    40% { transform: translate(2px, -1px); }
+    60% { transform: translate(-1px, 2px); }
+    80% { transform: translate(1px, -2px); }
+}
+
+@keyframes glitch-top {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(-3px, 0); }
+    75% { transform: translate(3px, 0); }
+}
+
+@keyframes glitch-bottom {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(3px, 0); }
+    75% { transform: translate(-3px, 0); }
+}
+
+/* ============================================
+   2. COUNTER NUMBERS في About
+   ============================================ */
+.skill-info span:last-child {
+    transition: all 0.3s;
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* ============================================
+   3. CARD FLIP في Projects
+   ============================================ */
+.project-link-wrapper {
+    perspective: 1000px;
+}
+
+.project-card {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.3s ease;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) rotateY(3deg) rotateX(2deg);
+    box-shadow: -8px 20px 40px rgba(0, 212, 168, 0.2);
+}
+
+/* نيون على الـ social icons */
+.social-icon:hover,
+.social-sidebar a:hover {
+    text-shadow: 0 0 10px rgba(0, 212, 168, 0.8);
+    filter: drop-shadow(0 0 5px rgba(0, 212, 168, 0.5));
+}
+
+/* نيون على الـ education card highlight */
+.education-card.highlight-edu {
+    animation: neon-card 3s ease-in-out infinite alternate;
+}
+/* ============================================
+   EXPERIENCE EFFECTS
+   ============================================ */
+
+/* تأثير على الـ timeline content لما يظهر */
+.timeline-content {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4a8, transparent);
+    animation: scan-line 3s ease-in-out infinite;
+}
+
+@keyframes scan-line {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.timeline-content:hover {
+    transform: translateX(-8px);
+    border-color: rgba(0, 212, 168, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 0 30px rgba(0, 212, 168, 0.05);
+}
+
+/* تأثير على الـ timeline info */
+.timeline-info {
+    transition: all 0.4s ease;
+}
+
+.timeline-info:hover {
+    transform: translateX(8px);
+}
+
+.timeline-info h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 8px rgba(0, 212, 168, 0.5);
+}
+
+.timeline-item:hover .timeline-info h3::after {
+    width: 100%;
+}
+
+/* تأثير على الـ dot */
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.4);
+    box-shadow: 0 0 20px rgba(0, 212, 168, 0.8),
+                0 0 40px rgba(0, 212, 168, 0.4);
+}
+
+/* ============================================
+   CONTACT EFFECTS
+   ============================================ */
+
+/* تأثير على الـ social icons */
+.social-icon {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(0, 212, 168, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+}
+
+.social-icon:hover::before {
+    width: 80px;
+    height: 80px;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) rotate(8deg);
+    box-shadow: 0 10px 25px rgba(0, 212, 168, 0.3);
+}
+
+/* تأثير على الاسم في Contact */
+#contact .footer-logo h2 {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#contact .footer-logo h2:hover {
+    text-shadow:
+        0 0 10px rgba(0, 212, 168, 0.4),
+        0 0 20px rgba(0, 212, 168, 0.2);
+    letter-spacing: 2px;
+}
+
+/* تأثير على الإيميل */
+.footer-email p {
+    position: relative;
+    display: inline-block;
+    color: var(--text-gray);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-email p::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 8px rgba(0, 212, 168, 0.5);
+}
+
+.footer-email p:hover {
+    color: var(--green);
+    text-shadow: 0 0 10px rgba(0, 212, 168, 0.3);
+}
+
+.footer-email p:hover::after {
+    width: 100%;
+}
+
+/* floating animation على الـ social icons بالتناوب */
+.social-links .social-icon:nth-child(1) { animation: float-icon 3s ease-in-out infinite 0.0s; }
+.social-links .social-icon:nth-child(2) { animation: float-icon 3s ease-in-out infinite 0.2s; }
+.social-links .social-icon:nth-child(3) { animation: float-icon 3s ease-in-out infinite 0.4s; }
+.social-links .social-icon:nth-child(4) { animation: float-icon 3s ease-in-out infinite 0.6s; }
+.social-links .social-icon:nth-child(5) { animation: float-icon 3s ease-in-out infinite 0.8s; }
+
+@keyframes float-icon {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+/* تأثير entrance على الـ contact section */
+#contact .section-header .big-title {
+    position: relative;
+}
+
+#contact .section-header .big-title::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0%;
+    background: var(--green);
+    transition: height 0.5s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 212, 168, 0.5);
+}
+/* ============================================
+   FOOTER NAV - FULL UPGRADE
+   أضف في آخر الـ CSS بتاعك
+   ============================================ */
+
+.main-footer {
+    background: linear-gradient(135deg, #0a0d14 0%, #0a1810 100%);
+    border-top: 1px solid rgba(0, 212, 168, 0.15);
+    padding: 25px 0;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* الـ separator بين الـ links */
+.footer-nav ul li:not(:last-child)::after {
+    content: '·';
+    color: rgba(0, 212, 168, 0.3);
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.footer-nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+/* تأثير underline بيكبر من المنتصف */
+.footer-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1.5px;
+    background: #00d4a8;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 212, 168, 0.5);
+}
+
+.footer-nav ul li a:hover {
+    color: #00d4a8;
+    background: rgba(0, 212, 168, 0.06);
+    border-color: rgba(0, 212, 168, 0.15);
+    text-shadow: 0 0 8px rgba(0, 212, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+.footer-nav ul li a:hover::after {
+    width: 60%;
+}
+
+/* Active state */
+.footer-nav ul li a.active {
+    color: #00d4a8;
+    background: rgba(0, 212, 168, 0.08);
+    border-color: rgba(0, 212, 168, 0.2);
+    font-weight: 600;
+}
+
+.footer-nav ul li a.active::after {
+    width: 60%;
+}
+
+/* copyright صغير تحت */
+.footer-copy {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: rgba(100, 116, 139, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.footer-copy span {
+    color: rgba(0, 212, 168, 0.5);
+}
+

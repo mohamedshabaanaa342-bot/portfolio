@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Shabaan | Portfolio</title>
+    <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wave.css">
+    <link rel="stylesheet" href="effect.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <header class="main-header">
     <nav class="container">
         <div class="logo">
-            <span class="job-tag">.Analyst</span>
+            <span class="job-tag"> <div class="hero-icon">
+                <i class="fas fa-chart-line"></i>
+            </div></span>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="nav-link active">Home</a></li>
@@ -25,28 +29,20 @@
         </ul>
     </nav>
 </header>
+
+<!-- ===== HERO ===== -->
 <main class="hero" id="home">
-    <!-- Social Sidebar -->
     <div class="social-sidebar">
-        <a href="https://www.linkedin.com/in/mohamed-shabaan-11221a3b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFqhRUci6RZ6Cg0pej%2B3enQ%3D%3D" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:mohamed.shabaan.3434@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <!-- WhatsApp -->
-        <a href="https://wa.me/201144045352" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/mohamed.shabaan.794" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://github.com/mohamedshabaanaa342-bot" target="_blank" class="btn-outline">
-            <i class="fab fa-github"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/mohamed-shabaan-11221a3b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFqhRUci6RZ6Cg0pej%2B3enQ%3D%3D" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:mohamed.shabaan.3434@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/201144045352" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/mohamed.shabaan.794" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/mohamedshabaanaa342-bot" target="_blank" class="btn-outline"><i class="fab fa-github"></i></a>
     </div>
-    <div class="hero-container" >
+    <div class="hero-container">
         <div class="hero-text">
+            <!-- أيقونة فوق -->
+           
             <h3 class="greeting">Hello I'm</h3>
             <h1>Mohamed Shabaan</h1>
             <p class="job-title">Data Analyst</p>
@@ -57,8 +53,7 @@
             </p>
             <div class="cta-buttons">
                 <a href="https://drive.google.com/file/d/1Bhih-Uv4L9iuUc2vwCbaowPShr50F6uy/view?usp=drive_link"
-                   target="_blank"
-                   class="btn btn-primary">
+                   target="_blank" class="btn btn-primary">
                     Download CV
                 </a>
             </div>
@@ -68,7 +63,15 @@
         </div>
     </div>
 </main>
-<!-- About -->
+
+<!-- WAVE: Hero → About -->
+<div class="wave-divider to-surface">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C360,80 1080,0 1440,40 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
+
+<!-- ===== ABOUT ===== -->
 <section class="about-section" id="about">
     <div class="container">
         <div class="section-header">
@@ -87,46 +90,34 @@
             </div>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="skill-info">
-                        <span>SQL (Database Design)</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="bar-bg">
-                        <div class="bar-fill" style="width: 90%;"></div>
-                    </div>
+                    <div class="skill-info"><span>SQL (Database Design)</span><span>90%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-info">
-                        <span>Python (Data Analysis)</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="bar-bg">
-                        <div class="bar-fill" style="width: 85%;"></div>
-                    </div>
+                    <div class="skill-info"><span>Python (Data Analysis)</span><span>85%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-info">
-                        <span>Power BI (Visualization)</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="bar-bg">
-                        <div class="bar-fill" style="width: 90%;"></div>
-                    </div>
+                    <div class="skill-info"><span>Power BI (Visualization)</span><span>90%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-info">
-                        <span>Advanced Excel</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="bar-bg">
-                        <div class="bar-fill" style="width: 95%;"></div>
-                    </div>
+                    <div class="skill-info"><span>Advanced Excel</span><span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Education -->
+
+<!-- WAVE: About → Education -->
+<div class="wave-divider to-education">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C480,70 960,0 1440,50 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
+
+<!-- ===== EDUCATION ===== -->
 <section class="education-section" id="education" data-aos="fade-right">
     <div class="container">
         <div class="section-header">
@@ -160,11 +151,18 @@
                     <li>Creating interactive dashboards and reports</li>
                 </ul>
             </div>
-
         </div>
     </div>
 </section>
-<!-- Portfolio -->
+
+<!-- WAVE: Education → Projects -->
+<div class="wave-divider to-projects">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,50 C360,10 1080,70 1440,30 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
+
+<!-- ===== PROJECTS ===== -->
 <section class="portfolio-section" id="portfolio">
     <div class="container">
         <div class="section-header">
@@ -175,186 +173,157 @@
             </div>
         </div>
         <div class="project-slider" id="projectSlider">
-            <!-- Project 1 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/sales-revenue-insights-dashboard-PowerBi.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="5">
-                    <div class="project-image">
-                        <img src="power.png" alt="Adventureworks Sales">
-                    </div>
+                    <div class="project-image"><img src="power.png" alt="Adventureworks Sales"></div>
                     <div class="project-info">
                         <h3>Adventureworks Sales</h3>
                         <p class="category">POWER BI | DATA ANALYTICS</p>
-                        <p class="project-desc">
-                            Modern Sales Insights Dashboard with custom KPIs and clean UI,
-                            optimizing the data model for faster refresh rates.
-                        </p>
+                        <p class="project-desc">Modern Sales Insights Dashboard with custom KPIs and clean UI, optimizing the data model for faster refresh rates.</p>
                     </div>
                 </div>
             </a>
-            <!-- Airline Operational Performance Project -->
             <a href="https://github.com/mohamedshabaanaa342-bot/Airline-Operational-Performance.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="5">
-                    <div class="project-image">
-                        <!-- يمكنك تغيير الصورة لتناسب Power BI -->
-                        <img src="a.png" alt="Airline Dashboard">
-                    </div>
+                    <div class="project-image"><img src="a.png" alt="Airline Dashboard"></div>
                     <div class="project-info">
                         <h3>Airline Operational Performance</h3>
                         <p class="category">POWER BI | BUSINESS INTELLIGENCE</p>
-                        <p class="project-desc">
-                            Interactive dashboard for flight delays and cancellation analysis. 
-                            Transforms raw operational data into actionable insights.
-                        </p>
+                        <p class="project-desc">Interactive dashboard for flight delays and cancellation analysis. Transforms raw operational data into actionable insights.</p>
                     </div>
                 </div>
             </a>
-            <!-- Project 2 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/httsales-revenue-insights-dashboard-excel.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="5">
-                    <div class="project-image">
-                        <img src="excel.png" alt="Excel Sales">
-                    </div>
+                    <div class="project-image"><img src="excel.png" alt="Excel Sales"></div>
                     <div class="project-info">
                         <h3>Sales Revenue Insights</h3>
                         <p class="category">MICROSOFT EXCEL | ANALYTICS</p>
-                        <p class="project-desc">
-                            End-to-end sales analysis using Power Query for transformation
-                            and Pivot Tables for dynamic reporting.
-                        </p>
+                        <p class="project-desc">End-to-end sales analysis using Power Query for transformation and Pivot Tables for dynamic reporting.</p>
                     </div>
                 </div>
             </a>
-            
-            <!-- Project 3 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/Movies-Data-Analysis.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="py.png" alt="Movies Analysis">
-                    </div>
+                    <div class="project-image"><img src="py.png" alt="Movies Analysis"></div>
                     <div class="project-info">
                         <h3>Movies Data Analysis</h3>
                         <p class="category">PYTHON | PANDAS & NUMPY</p>
-                        <p class="project-desc">
-                            Analyzed movie datasets to extract trends using Python,
-                            including data cleaning and exploratory analysis.
-                        </p>
+                        <p class="project-desc">Analyzed movie datasets to extract trends using Python, including data cleaning and exploratory analysis.</p>
                     </div>
                 </div>
             </a>
-            <!-- Project 4 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/CRM_Database_and_Data_Analysis.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="crm.png" alt="CRM System">
-                    </div>
+                    <div class="project-image"><img src="crm.png" alt="CRM System"></div>
                     <div class="project-info">
-                        <h3>CRM System </h3>
+                        <h3>CRM System</h3>
                         <p class="category">SQL | DATABASE DEVELOPMENT</p>
-                        <p class="project-desc">
-                            Built a CRM database system to manage customer info and sales
-                            processes with high data integrity.
-                        </p>
+                        <p class="project-desc">Built a CRM database system to manage customer info, sales and Customer opinions processes with high data integrity.</p>
                     </div>
                 </div>
             </a>
-            <!-- Project 5 -->
             <a href="https://github.com/mohamedshabaanaa342-bot/Trains_DB.git" target="_blank" class="project-link-wrapper">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="train.png" alt="Blood Bank System">
-                    </div>
+                    <div class="project-image"><img src="train.png" alt="Train System"></div>
                     <div class="project-info">
-                        <h3>Train System </h3>
+                        <h3>Train System</h3>
                         <p class="category">SQL | DATABASE DEVELOPMENT</p>
-                        <p class="project-desc">
-                            system is a comprehensive Train Reservation System that includes: train management,
-                             trips, employees, booking, seat management.
-                        </p>
+                        <p class="project-desc">Comprehensive Train Reservation System that includes: train management, trips, employees, booking, seat management.</p>
                     </div>
                 </div>
             </a>
-            <!-- Project 6 -->
-
         </div>
         <div class="slider-arrows">
-                <button class="arrow-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-            </div>
+            <button class="arrow-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
     </div>
 </section>
-<!-- Experience -->
+
+<!-- WAVE: Projects → Experience -->
+<div class="wave-divider to-experience">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,50 C360,10 1080,70 1440,30 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
 <section class="experience-section" id="experience">
     <div class="container">
-
         <div class="section-header">
             <h2 class="big-title">Work Experience</h2>
             <div class="center-line"></div>
         </div>
-
         <div class="timeline-container">
-
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <p>
-                        Provided professional technical support for users by troubleshooting
-                        hardware and software issues. Performed system maintenance and updates
-                        to ensure high operational efficiency.
-                    </p>
+                    <p>Provided professional technical support for users by troubleshooting
+                    hardware and software issues. Performed system maintenance and updates
+                    to ensure high operational efficiency.</p>
                 </div>
-
                 <div class="timeline-dot"></div>
-
                 <div class="timeline-info">
                     <h3>IT Help Desk Support</h3>
                     <p class="company">El Nasr Constructing Company | Full-time</p>
                     <span class="date">Jun 2023 – Nov 2023</span>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
+
+<!-- WAVE: Experience → Contact -->
+<div class="wave-divider to-contact">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C360,0 1080,70 1440,20 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
+
+<!-- ===== CONTACT ===== -->
 <section id="contact">
     <div>
-    <div class="section-header">
-        <span class="subtitle">Get In Touch</span>
-        <h2 class="big-title">Contact <span style="color: var(--green);">Me</span></h2>
-        <div class="center-line"></div>
-    </div>
-    <div class="footer-logo">
-        <h2>Mohamed Shabaan</h2>
-    </div>
-    <div class="footer-logo">
-        <h2>Data <span>Analyst</span></h2>
-    </div>
-    <div class="social-links">
-        <a href="https://www.linkedin.com/in/mohamed-shabaan-11221a3b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFqhRUci6RZ6Cg0pej%2B3enQ%3D%3D" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:mohamed.shabaan.3434@gmail.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/201144045352" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/mohamed.shabaan.794" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://github.com/mohamedshabaanaa342-bot" class="social-icon" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-       
-    </div>
-    <div class="footer-email">
-        <p>mohamed.shabaan.3434@gmail.com</p>
-    </div>
+        <div class="section-header">
+            <span class="subtitle">Get In Touch</span>
+            <h2 class="big-title">Contact <span style="color: var(--green);">Me</span></h2>
+            <div class="center-line"></div>
+        </div>
+        <div class="footer-logo">
+            <h2>Mohamed Shabaan</h2>
+        </div>
+        <div class="footer-logo">
+            <h2>Data <span>Analyst</span></h2>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohamed-shabaan-11221a3b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFqhRUci6RZ6Cg0pej%2B3enQ%3D%3D" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:mohamed.shabaan.3434@gmail.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/201144045352" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/mohamed.shabaan.794" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://github.com/mohamedshabaanaa342-bot" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-email">
+            <p>mohamed.shabaan.3434@gmail.com</p>
+        </div>
     </div>
 </section>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 83cdcf8 (Update: Applied Professional Dark Theme)
 <script src="script.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000, // سرعة الأنيميشن (ثانية واحدة)
-    once: true,     // الأنيميشن يحدث مرة واحدة فقط أثناء النزول
-    offset: 200     // يبدأ الأنيميشن قبل وصول القسم بـ 200 بكسل
+    duration: 1000,
+    once: true,
+    offset: 200
   });
 </script>
 </body>
 
-
-<!-- Footer منفصل تماماً -->
+<!-- ===== FOOTER ===== -->
 <footer class="main-footer">
     <nav class="footer-nav">
         <ul>
@@ -364,7 +333,6 @@
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            
         </ul>
     </nav>
 </footer>
